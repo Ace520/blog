@@ -8,20 +8,31 @@
       >
         <div class="card mb-4 p-4 flex justify-between">
           <div class="flex-1 flex flex-col justify-between">
-            <router-link :to="item.path">
+            <router-link :to="item.path" class="font-bold">
               {{ item.title }}
             </router-link>
-            <div>
-              <div>{{ item.frontmatter.topic }}</div>
-              <div>{{ item.frontmatter.tags }}</div>
-              <div>{{ item.frontmatter.date }}</div>
+            <div class="text-sm text-gray-600 leading-6">
+              <div class="pl-1" v-if="item.frontmatter.date">
+                {{ fDate(item.frontmatter.date) }}
+              </div>
+              <div class="pl-1" v-if="item.frontmatter.topic">
+                {{ item.frontmatter.topic }}
+              </div>
+              <div v-if="item.frontmatter.tags" class="flex items-center mt-1">
+                <div
+                  v-for="(item1, index1) in item.frontmatter.tags"
+                  :key="index1"
+                  class="tag-1 truncate"
+                >
+                  {{ item1 }}
+                </div>
+              </div>
             </div>
           </div>
           <div
             v-if="item.frontmatter.bg"
-            class="bg-cover bg-center flex-none"
-            v-lazy:background-image="$withBase('/'+item.frontmatter.bg)"
-            style="width: 7rem; height: 7rem"
+            class="bg-cover bg-center flex-none w-32 h-32"
+            v-lazy:background-image="$withBase('/' + item.frontmatter.bg)"
           ></div>
         </div>
       </div>
@@ -40,5 +51,14 @@ export default {
     return {};
   },
   mounted() {},
+  methods: {
+    fDate(date) {
+      let d = new Date(date);
+      return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+    },
+  },
 };
 </script>
+<style scoped>
+
+</style>

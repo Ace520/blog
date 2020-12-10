@@ -35,7 +35,7 @@ module.exports = {
                     layout: 'Layout',
                     itemLayout: 'PostItem',
                     pagination: {
-                        perPagePosts: 2,
+                        perPagePosts: 20,
                     },
                 },
                 {
@@ -65,18 +65,21 @@ module.exports = {
                 {
                     id: "tag",
                     keys: ['tag', 'tags'],
-                    path: '/tag',
+                    path: '/tag/',
                     layout: 'Tag',
                     frontmatter: { title: '标签' },
                 },
                 {
                     id: "topic",
                     keys: ['topic', 'topics'],
-                    path: '/topic',
+                    path: '/topic/',
                     layout: 'Topic',
                     frontmatter: { title: '话题' },
                 }
             ],
+            globalPagination: {
+                lengthPerPage: 30,
+            },
             sitemap: {
                 hostname: 'https://ace520.github.io/blog'
             },
@@ -102,12 +105,12 @@ module.exports = {
         }],
         ['vuepress-plugin-code-copy', {
             selector: 'div[class*="language-"] pre',
-            align: "top",
-            color: "#27b1ff",
+            align: "bottom",
+            color: "#e2e8f0",
             backgroundTransition: true,
             backgroundColor: "#0075b8",
-            successText: "复制！",
-            staticIcon: true
+            successText: "Copied!",
+            staticIcon: false
         }],
         ["@kawarimidoll/tailwind"],
         ['@goy/svg-icons']
