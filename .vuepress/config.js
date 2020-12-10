@@ -41,7 +41,7 @@ module.exports = {
                 {
                     id: 'lab',
                     dirname: 'lab',
-                    path: '/lab',
+                    path: '/lab/',
                     itemPermalink: '/lab/:slug',
                     layout: 'Lab',
                     itemLayout: 'PostItem',
@@ -52,7 +52,7 @@ module.exports = {
                 {
                     id: 'link',
                     dirname: 'links',
-                    path: '/link',
+                    path: '/link/',
                     itemPermalink: '/link/:slug',
                     layout: 'Link',
                     itemLayout: 'PostItem',
