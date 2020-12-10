@@ -20,7 +20,7 @@
           <div
             v-if="item.frontmatter.bg"
             class="bg-cover bg-center flex-none"
-            v-lazy:background-image="$withBase(item.frontmatter.bg)"
+            v-lazy:background-image="$withBase('/'+item.frontmatter.bg)"
             style="width: 7rem; height: 7rem"
           ></div>
         </div>

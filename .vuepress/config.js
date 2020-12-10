@@ -30,9 +30,9 @@ module.exports = {
                 {
                     id: 'post',
                     dirname: 'posts',
-                    path: '/post',
+                    path: '/post/',
                     itemPermalink: '/post/:year/:month/:day/:slug',
-                    layout: 'Post',
+                    layout: 'Layout',
                     itemLayout: 'PostItem',
                     pagination: {
                         perPagePosts: 2,
@@ -65,24 +65,16 @@ module.exports = {
                 {
                     id: "tag",
                     keys: ['tag', 'tags'],
-                    path: '/tag/',
-                    layout: 'Post',
+                    path: '/tag',
+                    layout: 'Tag',
                     frontmatter: { title: '标签' },
-                    itemlayout: 'PostItem',
-                    pagination: {
-                        perPagePosts: 3
-                    }
                 },
                 {
                     id: "topic",
                     keys: ['topic', 'topics'],
-                    path: '/topic/',
-                    layout: 'Post',
+                    path: '/topic',
+                    layout: 'Topic',
                     frontmatter: { title: '话题' },
-                    itemlayout: 'PostItem',
-                    pagination: {
-                        perPagePosts: 3
-                    }
                 }
             ],
             sitemap: {
