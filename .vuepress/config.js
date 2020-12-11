@@ -87,8 +87,8 @@ module.exports = {
                 service: 'vssue',
                 owner: 'Ace520',
                 repo: 'blog',
-                clientId: 'Iv1.535c99f0a882ed45',
-                clientSecret: '6ec379adea91d41358679a159e6688a258dff8a9',
+                clientId: '90660a979ed7ca0d1dc5',
+                clientSecret: '762687bde43924c57ee3694192f6ead122ac85fc',
             },
             feed: {
                 canonical_base: 'https://ace520.github.io/blog'
