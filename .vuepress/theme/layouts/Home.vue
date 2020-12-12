@@ -2,7 +2,7 @@
   <div>
     <div class="grid grid-cols-12 gap-4">
       <div
-        class="card col-span-4 flex items-center justify-center flex-col p-8"
+        class="card col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-4 xl:col-span-4 flex items-center justify-center flex-col p-8"
       >
         <div
           class="bg-cover bg-center h-20 w-20 border rounded-full"
@@ -30,7 +30,9 @@
           </a>
         </div>
       </div>
-      <div class="card col-span-8 p-4 leading-7">
+      <div
+        class="card col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-8 xl:col-span-8 p-4 leading-7"
+      >
         <div class="font-bold my-2">自我介绍？</div>
         <p>1、一名92年的中年人，现在从事互联网软件的相关研究与开发。</p>
         <p>2、除了偶尔玩下游戏，其余时间都在Coding，这就是所谓的程序人生吧。</p>
@@ -46,50 +48,28 @@
       >
         开源项目
       </div>
-      <div class="grid grid-cols-12 gap-4">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4"
+      >
         <div
           v-for="(item, index) in labs"
           :key="index"
-          class="card bg-cover bg-center text-white col-span-12"
-          v-if="index == 0"
+          v-if="index < 2"
+          class="card bg-cover bg-center text-white"
           v-lazy:background-image="$withBase(item.frontmatter.bg)"
         >
           <div class="flex flex-col items-center justify-center h-64">
-            <h3>{{ item.frontmatter.title }}</h3>
-            <div class="flex items-center my-5">
-              <a
-                class="text-white px-2"
-                :href="item.frontmatter.url"
-                target="_blank"
-                ><vp-icon name="eye" size="1.8rem"
-              /></a>
-              <a
-                class="text-white px-2"
-                :href="item.frontmatter.github"
-                target="_blank"
-              >
-                <vp-icon name="github" size="1.3rem" />
-              </a>
-            </div>
-            <div class="">{{ item.frontmatter.description }}</div>
-          </div>
-        </div>
-        <div
-          v-for="(item, index) in labs"
-          :key="index"
-          class="card bg-cover bg-center text-white col-span-4"
-          v-if="index > 0"
-          v-lazy:background-image="$withBase(item.frontmatter.bg)"
-        >
-          <div class="flex flex-col items-center justify-center h-48">
-            <h3>{{ item.frontmatter.title }}</h3>
+            <div class="text-xl">{{ item.frontmatter.title }}</div>
             <div class="flex items-center my-3">
+              <router-link :to="item.path" class="text-white px-2">
+                <vp-icon name="eye" size="1.8rem" />
+              </router-link>
               <a
                 class="text-white px-2"
                 :href="item.frontmatter.url"
                 target="_blank"
               >
-                <vp-icon name="eye" size="1.8rem"
+                <vp-icon name="website" size="1.05rem"
               /></a>
               <a
                 class="text-white px-2"
@@ -111,12 +91,10 @@
       >
         话题
       </div>
-      <div class="grid grid-cols-12 gap-4">
-        <div
-          v-for="(item, index) in $topic.list"
-          :key="index"
-          class="card col-span-3"
-        >
+      <div
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+      >
+        <div v-for="(item, index) in $topic.list" :key="index" class="card">
           <div
             class="flex items-center justify-between border-b px-4 py-3 text-sm text-gray-600"
           >
@@ -143,12 +121,12 @@
       >
         标签
       </div>
-      <div>
+      <div class="flex flex-wrap">
         <router-link
           v-for="(item, index) in $tag.list"
           :key="index"
           :to="item.path"
-          class="tag"
+          class="text-white bg-gray-600 rounded-full text-xs px-5 py-2 m-2"
         >
           {{ item.name }}({{ item.pages.length }})
         </router-link>
@@ -161,8 +139,10 @@
       >
         统计
       </div>
-      <div class="flex">
-        <div class="flex-1 flex items-center flex-col">
+      <div
+        class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5 gap-4"
+      >
+        <div class="flex items-center flex-col">
           <div
             class="w-16 h-16 bg-green-300 text-white rounded-full mx-auto border flex items-center justify-center"
           >
@@ -175,7 +155,7 @@
             <p class="flex-1 pl-2">POSTS</p>
           </div>
         </div>
-        <div class="flex-1 flex items-center flex-col">
+        <div class="flex items-center flex-col">
           <div
             class="w-16 h-16 bg-green-300 text-white rounded-full mx-auto border flex items-center justify-center"
           >
@@ -188,11 +168,11 @@
             <p class="flex-1 pl-2">LAB</p>
           </div>
         </div>
-        <div class="flex-1 flex items-center flex-col">
+        <div class="flex items-center flex-col">
           <div
             class="w-16 h-16 bg-green-300 text-white rounded-full mx-auto border flex items-center justify-center"
           >
-            <vp-icon name="tag" size="1.4rem"/>
+            <vp-icon name="tag" size="1.4rem" />
           </div>
           <div class="my-4 font-bold text-2xl">{{ $tag.list.length }}</div>
           <div class="flex w-full text-sm text-gray-600">
@@ -201,7 +181,7 @@
             <p class="flex-1 pl-2">TAG</p>
           </div>
         </div>
-        <div class="flex-1 flex items-center flex-col">
+        <div class="flex items-center flex-col">
           <div
             class="w-16 h-16 bg-green-300 text-white rounded-full mx-auto border flex items-center justify-center"
           >
@@ -214,7 +194,7 @@
             <p class="flex-1 pl-2">TOPIC</p>
           </div>
         </div>
-        <div class="flex-1 flex items-center flex-col">
+        <div class="flex items-center flex-col">
           <div
             class="w-16 h-16 bg-green-300 text-white rounded-full mx-auto border flex items-center justify-center"
           >
@@ -255,14 +235,4 @@ export default {
 };
 </script>
 <style scoped>
-.tag {
-  color: #ffffff;
-  margin: 0.8rem;
-  background-color: rgba(10, 10, 1, 0.2);
-  border-radius: 1rem;
-  padding: 0.3rem 0.9rem;
-  font-size: 14px;
-  text-decoration: none;
-  line-height: 2.8rem;
-}
 </style>

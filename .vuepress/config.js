@@ -4,10 +4,10 @@ module.exports = {
     description: 'Ace blog',
     themeConfig: {
         nav: [
-            { text: '博客文章', link: '/post', layout: 'Post' },
-            { text: '实验室', link: '/lab', layout: "Lab" },
-            { text: '友情链接', link: '/link', layout: 'Link' },
-            { text: '留言板', link: '/guestbook/', layout: 'Guestbook' },
+            { text: '博客文章', link: '/post', layout: ['Layout','PostItem','FrontmatterPagination'] },
+            { text: '实验室', link: '/lab', layout: ["Lab"] },
+            { text: '友情链接', link: '/link', layout: ['Link'] },
+            { text: '留言板', link: '/guestbook/', layout: ['Guestbook'] },
         ],
         dateFormat: 'YYYY-MM-DD',
         pwa: {

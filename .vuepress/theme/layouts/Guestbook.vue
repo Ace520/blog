@@ -1,6 +1,6 @@
 <template>
   <div style="max-width: 800px" class="mx-auto guestbook">
-    <div>
+    <div class="vssue-1 card">
       <Comment />
     </div>
   </div>

@@ -8,7 +8,7 @@
               <SearchBox/>
         </div>
         <div>
-            <router-link class="nav-link" :class="$frontmatter.layout ===item.layout ? 'nav-link-active':''" v-for="(item,index) in $themeConfig.nav" :key="index" :to="item.link">{{ item.text }}</router-link>
+            <router-link class="nav-link" :class="item.layout.indexOf($frontmatter.layout) > -1 ? 'nav-link-active':''" v-for="(item,index) in $themeConfig.nav" :key="index" :to="item.link">{{ item.text }}</router-link>
         </div>
         </div>
     </div>

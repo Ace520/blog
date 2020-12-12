@@ -5,18 +5,30 @@
       v-for="(item, index) in $pagination.pages"
       :key="index"
       class="mx-auto card bg-cover bg-center text-white"
-      v-lazy:background-image="$withBase(item.frontmatter.bg)"
+      v-lazy:background-image="$withBase('/' + item.frontmatter.bg)"
     >
-      <div
-        class="flex flex-col items-center justify-center"
-        style="padding-top: 4rem; padding-bottom: 4rem"
-      >
-        <h3>{{ item.title }}</h3>
-        <div>
-          <a class="text-white px-2" :href="item.frontmatter.url">查看</a>
-          <a class="text-white px-2" :href="item.frontmatter.github">github</a>
+      <div class="flex flex-col items-center justify-center py-20">
+        <div class="text-2xl">{{ item.title }}</div>
+        <div class="flex items-center my-5">
+          <router-link :to="item.path" class="text-white px-2">
+            <vp-icon name="eye" size="1.8rem" />
+          </router-link>
+          <a
+            class="text-white px-2"
+            :href="item.frontmatter.url"
+            target="_blank"
+          >
+            <vp-icon name="website" size="1.05rem"
+          /></a>
+          <a
+            class="text-white px-2"
+            :href="item.frontmatter.github"
+            target="_blank"
+          >
+            <vp-icon name="github" size="1.3rem" />
+          </a>
         </div>
-        <div class="m-4">{{ item.frontmatter.description }}</div>
+        <div class="">{{ item.frontmatter.description }}</div>
       </div>
     </div>
   </div>

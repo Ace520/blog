@@ -1,6 +1,6 @@
 <template>
-  <div class="grid grid-cols-12 gap-4">
-    <div class="card col-span-9">
+  <div class="grid grid-cols-11 gap-4">
+    <div class="card col-span-11 sm:col-span-11 md:col-span-11 lg:col-span-11 xl:col-span-9">
       <div class="p-4 border-b">
         <div class="mb-3 mt-1 text-lg font-bold">{{ $page.title }}</div>
         <div class="flex items-center text-sm text-gray-600">
@@ -28,7 +28,7 @@
         <Comment />
       </div>
     </div>
-    <div class="card col-span-3">
+    <div class="card col-span-2 sm:hidden md:hidden lg:hidden xl:block">
       <div style="height: 100vh; position: sticky; top: 0">
         <div
           class="px-2 truncate"
