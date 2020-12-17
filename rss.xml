@@ -4,16 +4,10 @@
         <title>ACE-BLOG</title>
         <link>https://ace520.github.io/blog</link>
         <description>Ace blog</description>
-        <lastBuildDate>Wed, 16 Dec 2020 22:41:01 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 17 Dec 2020 23:53:18 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://ace520.github.io/blog/feed.atom" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[Travis CI持续集成服务]]></title>
-            <link>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</link>
-            <guid>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</guid>
-            <pubDate>Tue, 18 Jun 2019 00:00:00 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[Travis CI持续集成服务]]></title>
             <link>https://ace520.github.io/blog/lab/travis-ci-tutorial/</link>
@@ -21,11 +15,10 @@
             <pubDate>Tue, 18 Jun 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[速查表]]></title>
-            <link>https://ace520.github.io/blog/lab/cheatsheet-copy-3/</link>
-            <guid>https://ace520.github.io/blog/lab/cheatsheet-copy-3/</guid>
-            <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[速查表]]></description>
+            <title><![CDATA[Travis CI持续集成服务]]></title>
+            <link>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</link>
+            <guid>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</guid>
+            <pubDate>Tue, 18 Jun 2019 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[速查表]]></title>
@@ -36,8 +29,8 @@
         </item>
         <item>
             <title><![CDATA[速查表]]></title>
-            <link>https://ace520.github.io/blog/lab/cheatsheet-copy-4/</link>
-            <guid>https://ace520.github.io/blog/lab/cheatsheet-copy-4/</guid>
+            <link>https://ace520.github.io/blog/lab/cheatsheet-copy-3/</link>
+            <guid>https://ace520.github.io/blog/lab/cheatsheet-copy-3/</guid>
             <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[速查表]]></description>
         </item>
@@ -52,6 +45,13 @@
             <title><![CDATA[速查表]]></title>
             <link>https://ace520.github.io/blog/lab/cheatsheet/</link>
             <guid>https://ace520.github.io/blog/lab/cheatsheet/</guid>
+            <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[速查表]]></description>
+        </item>
+        <item>
+            <title><![CDATA[速查表]]></title>
+            <link>https://ace520.github.io/blog/lab/cheatsheet-copy-4/</link>
+            <guid>https://ace520.github.io/blog/lab/cheatsheet-copy-4/</guid>
             <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[速查表]]></description>
         </item>
@@ -117,13 +117,6 @@
             <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[速查表]]></title>
-            <link>https://ace520.github.io/blog/link/cheatsheet/</link>
-            <guid>https://ace520.github.io/blog/link/cheatsheet/</guid>
-            <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[速查表]]></description>
-        </item>
-        <item>
             <title><![CDATA[barryvdh/laravel-debugbar 页面调试工具栏]]></title>
             <link>https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-debugbar/</link>
             <guid>https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-debugbar/</guid>
@@ -143,6 +136,14 @@
             <guid>https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-ide-helper/</guid>
             <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
             <enclosure url="https://ace520.github.io/blog/LICENSE.md">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[dingo/api 构建 API 服务器的完整解决方案]]></title>
+            <link>https://ace520.github.io/blog/post/2020/05/22/dingo-api/</link>
+            <guid>https://ace520.github.io/blog/post/2020/05/22/dingo-api/</guid>
+            <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
+            <enclosure url="https://img.shields.io/travis/dingo/api/master.svg?style=flat-square">
             </enclosure>
         </item>
     </channel>

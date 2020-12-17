@@ -2,18 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ace520.github.io/blog</id>
     <title>ACE-BLOG</title>
-    <updated>2020-12-16T22:41:01.829Z</updated>
+    <updated>2020-12-17T23:53:18.352Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://ace520.github.io/blog"/>
     <link rel="self" href="https://ace520.github.io/blog/feed.atom"/>
     <subtitle>Ace blog</subtitle>
-    <entry>
-        <title type="html"><![CDATA[Travis CI持续集成服务]]></title>
-        <id>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</id>
-        <link href="https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/">
-        </link>
-        <updated>2019-06-18T00:00:00.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Travis CI持续集成服务]]></title>
         <id>https://ace520.github.io/blog/lab/travis-ci-tutorial/</id>
@@ -22,12 +15,11 @@
         <updated>2019-06-18T00:00:00.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[速查表]]></title>
-        <id>https://ace520.github.io/blog/lab/cheatsheet-copy-3/</id>
-        <link href="https://ace520.github.io/blog/lab/cheatsheet-copy-3/">
+        <title type="html"><![CDATA[Travis CI持续集成服务]]></title>
+        <id>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</id>
+        <link href="https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/">
         </link>
-        <updated>2020-12-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[速查表]]></summary>
+        <updated>2019-06-18T00:00:00.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[速查表]]></title>
@@ -39,8 +31,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[速查表]]></title>
-        <id>https://ace520.github.io/blog/lab/cheatsheet-copy-4/</id>
-        <link href="https://ace520.github.io/blog/lab/cheatsheet-copy-4/">
+        <id>https://ace520.github.io/blog/lab/cheatsheet-copy-3/</id>
+        <link href="https://ace520.github.io/blog/lab/cheatsheet-copy-3/">
         </link>
         <updated>2020-12-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[速查表]]></summary>
@@ -57,6 +49,14 @@
         <title type="html"><![CDATA[速查表]]></title>
         <id>https://ace520.github.io/blog/lab/cheatsheet/</id>
         <link href="https://ace520.github.io/blog/lab/cheatsheet/">
+        </link>
+        <updated>2020-12-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[速查表]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[速查表]]></title>
+        <id>https://ace520.github.io/blog/lab/cheatsheet-copy-4/</id>
+        <link href="https://ace520.github.io/blog/lab/cheatsheet-copy-4/">
         </link>
         <updated>2020-12-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[速查表]]></summary>
@@ -132,14 +132,6 @@
         <updated>2020-05-22T00:00:00.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[速查表]]></title>
-        <id>https://ace520.github.io/blog/link/cheatsheet/</id>
-        <link href="https://ace520.github.io/blog/link/cheatsheet/">
-        </link>
-        <updated>2020-12-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[速查表]]></summary>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[barryvdh/laravel-debugbar 页面调试工具栏]]></title>
         <id>https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-debugbar/</id>
         <link href="https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-debugbar/">
@@ -157,6 +149,13 @@
         <title type="html"><![CDATA[barryvdh/laravel-ide-helper IDE 开发 Laravel 项目的好帮手]]></title>
         <id>https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-ide-helper/</id>
         <link href="https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-ide-helper/">
+        </link>
+        <updated>2020-05-22T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[dingo/api 构建 API 服务器的完整解决方案]]></title>
+        <id>https://ace520.github.io/blog/post/2020/05/22/dingo-api/</id>
+        <link href="https://ace520.github.io/blog/post/2020/05/22/dingo-api/">
         </link>
         <updated>2020-05-22T00:00:00.000Z</updated>
     </entry>
