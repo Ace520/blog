@@ -2,22 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ace520.github.io/blog</id>
     <title>ACE-BLOG</title>
-    <updated>2020-12-17T23:53:18.352Z</updated>
+    <updated>2020-12-18T00:25:14.042Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://ace520.github.io/blog"/>
     <link rel="self" href="https://ace520.github.io/blog/feed.atom"/>
     <subtitle>Ace blog</subtitle>
     <entry>
         <title type="html"><![CDATA[Travis CI持续集成服务]]></title>
-        <id>https://ace520.github.io/blog/lab/travis-ci-tutorial/</id>
-        <link href="https://ace520.github.io/blog/lab/travis-ci-tutorial/">
+        <id>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</id>
+        <link href="https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/">
         </link>
         <updated>2019-06-18T00:00:00.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Travis CI持续集成服务]]></title>
-        <id>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</id>
-        <link href="https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/">
+        <id>https://ace520.github.io/blog/lab/travis-ci-tutorial/</id>
+        <link href="https://ace520.github.io/blog/lab/travis-ci-tutorial/">
         </link>
         <updated>2019-06-18T00:00:00.000Z</updated>
     </entry>
@@ -39,22 +39,6 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[速查表]]></title>
-        <id>https://ace520.github.io/blog/lab/cheatsheet-copy-5/</id>
-        <link href="https://ace520.github.io/blog/lab/cheatsheet-copy-5/">
-        </link>
-        <updated>2020-12-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[速查表]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[速查表]]></title>
-        <id>https://ace520.github.io/blog/lab/cheatsheet/</id>
-        <link href="https://ace520.github.io/blog/lab/cheatsheet/">
-        </link>
-        <updated>2020-12-09T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[速查表]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[速查表]]></title>
         <id>https://ace520.github.io/blog/lab/cheatsheet-copy-4/</id>
         <link href="https://ace520.github.io/blog/lab/cheatsheet-copy-4/">
         </link>
@@ -63,8 +47,24 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[速查表]]></title>
+        <id>https://ace520.github.io/blog/lab/cheatsheet-copy-5/</id>
+        <link href="https://ace520.github.io/blog/lab/cheatsheet-copy-5/">
+        </link>
+        <updated>2020-12-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[速查表]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[速查表]]></title>
         <id>https://ace520.github.io/blog/lab/cheatsheet-copy/</id>
         <link href="https://ace520.github.io/blog/lab/cheatsheet-copy/">
+        </link>
+        <updated>2020-12-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[速查表]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[速查表]]></title>
+        <id>https://ace520.github.io/blog/lab/cheatsheet/</id>
+        <link href="https://ace520.github.io/blog/lab/cheatsheet/">
         </link>
         <updated>2020-12-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[速查表]]></summary>
@@ -102,13 +102,6 @@
         <summary type="html"><![CDATA[速查表]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Travis CI持续集成服务]]></title>
-        <id>https://ace520.github.io/blog/post/2019/06/18/travis-ci-tutorial/</id>
-        <link href="https://ace520.github.io/blog/post/2019/06/18/travis-ci-tutorial/">
-        </link>
-        <updated>2019-06-18T00:00:00.000Z</updated>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[速查表]]></title>
         <id>https://ace520.github.io/blog/link/cheatsheet-copy-6/</id>
         <link href="https://ace520.github.io/blog/link/cheatsheet-copy-6/">
@@ -125,11 +118,29 @@
         <summary type="html"><![CDATA[速查表]]></summary>
     </entry>
     <entry>
+        <title type="html"><![CDATA[速查表]]></title>
+        <id>https://ace520.github.io/blog/link/cheatsheet/</id>
+        <link href="https://ace520.github.io/blog/link/cheatsheet/">
+        </link>
+        <updated>2020-12-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[速查表]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Travis CI持续集成服务]]></title>
+        <id>https://ace520.github.io/blog/post/2019/06/18/travis-ci-tutorial/</id>
+        <link href="https://ace520.github.io/blog/post/2019/06/18/travis-ci-tutorial/">
+        </link>
+        <updated>2019-06-18T00:00:00.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[SimpleSoftwareIO/simple-qrcode 二维码生成]]></title>
         <id>https://ace520.github.io/blog/post/2020/05/22/simplesoftwareio-simple-qrcode/</id>
         <link href="https://ace520.github.io/blog/post/2020/05/22/simplesoftwareio-simple-qrcode/">
         </link>
         <updated>2020-05-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Simple QrCode
+
+Upload files with a single curl command from your terminal! curl --upload-file file.txt https://keep.sh]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[barryvdh/laravel-debugbar 页面调试工具栏]]></title>
@@ -137,6 +148,8 @@
         <link href="https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-debugbar/">
         </link>
         <updated>2020-05-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[barryvdh/laravel-dompdf PDF 操作工具]]></title>
@@ -144,6 +157,7 @@
         <link href="https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-dompdf/">
         </link>
         <updated>2020-05-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Barryvdh\DomPDF\ServiceProvider::class,]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[barryvdh/laravel-ide-helper IDE 开发 Laravel 项目的好帮手]]></title>
@@ -151,12 +165,6 @@
         <link href="https://ace520.github.io/blog/post/2020/05/22/barryvdh-laravel-ide-helper/">
         </link>
         <updated>2020-05-22T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[dingo/api 构建 API 服务器的完整解决方案]]></title>
-        <id>https://ace520.github.io/blog/post/2020/05/22/dingo-api/</id>
-        <link href="https://ace520.github.io/blog/post/2020/05/22/dingo-api/">
-        </link>
-        <updated>2020-05-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Require this package with composer using the following command:]]></summary>
     </entry>
 </feed>
