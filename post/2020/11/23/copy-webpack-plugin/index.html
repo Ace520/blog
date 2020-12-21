@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>copy-webpack-plugin打包复制插件 | ACE-BLOG</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="alternate" type="application/rss+xml" href="https://ace520.github.io/blog/rss.xml" title="ACE-BLOG RSS Feed">
+    <link rel="alternate" type="application/atom+xml" href="https://ace520.github.io/blog/feed.atom" title="ACE-BLOG Atom Feed">
+    <link rel="alternate" type="application/json" href="https://ace520.github.io/blog/feed.json" title="ACE-BLOG JSON Feed">
+    <meta name="description" content="Ace blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.ccdcf3c0.css" as="style"><link rel="preload" href="/blog/assets/js/app.c7063bc1.js" as="script"><link rel="preload" href="/blog/assets/js/6.c6ab8268.js" as="script"><link rel="preload" href="/blog/assets/js/48.2715fac7.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4be27d57.js"><link rel="prefetch" href="/blog/assets/js/11.f42fa33c.js"><link rel="prefetch" href="/blog/assets/js/12.1b0d2966.js"><link rel="prefetch" href="/blog/assets/js/13.27d6d848.js"><link rel="prefetch" href="/blog/assets/js/14.8b5cf5ed.js"><link rel="prefetch" href="/blog/assets/js/15.8a32ccec.js"><link rel="prefetch" href="/blog/assets/js/16.12d3363c.js"><link rel="prefetch" href="/blog/assets/js/17.8377dcd9.js"><link rel="prefetch" href="/blog/assets/js/18.984a8db3.js"><link rel="prefetch" href="/blog/assets/js/19.b3839dba.js"><link rel="prefetch" href="/blog/assets/js/20.11708976.js"><link rel="prefetch" href="/blog/assets/js/21.bd37a20c.js"><link rel="prefetch" href="/blog/assets/js/22.a6292ebd.js"><link rel="prefetch" href="/blog/assets/js/23.d3672011.js"><link rel="prefetch" href="/blog/assets/js/24.6e7b930d.js"><link rel="prefetch" href="/blog/assets/js/25.ea92e2f6.js"><link rel="prefetch" href="/blog/assets/js/26.01b3ad23.js"><link rel="prefetch" href="/blog/assets/js/27.e19a5c90.js"><link rel="prefetch" href="/blog/assets/js/28.86d8cf70.js"><link rel="prefetch" href="/blog/assets/js/29.d9a30199.js"><link rel="prefetch" href="/blog/assets/js/3.d9ce3c7d.js"><link rel="prefetch" href="/blog/assets/js/30.5e7113d0.js"><link rel="prefetch" href="/blog/assets/js/31.a484479b.js"><link rel="prefetch" href="/blog/assets/js/32.0f7920af.js"><link rel="prefetch" href="/blog/assets/js/33.cfeb37b1.js"><link rel="prefetch" href="/blog/assets/js/34.dd157ef7.js"><link rel="prefetch" href="/blog/assets/js/35.d7585257.js"><link rel="prefetch" href="/blog/assets/js/36.67df1c48.js"><link rel="prefetch" href="/blog/assets/js/37.2e650e24.js"><link rel="prefetch" href="/blog/assets/js/38.cc4cadd7.js"><link rel="prefetch" href="/blog/assets/js/39.f590df05.js"><link rel="prefetch" href="/blog/assets/js/4.a5d12463.js"><link rel="prefetch" href="/blog/assets/js/40.075f42ad.js"><link rel="prefetch" href="/blog/assets/js/41.9e44ec61.js"><link rel="prefetch" href="/blog/assets/js/42.110656c3.js"><link rel="prefetch" href="/blog/assets/js/43.b06e7ce5.js"><link rel="prefetch" href="/blog/assets/js/44.fb3ddd23.js"><link rel="prefetch" href="/blog/assets/js/45.719139e9.js"><link rel="prefetch" href="/blog/assets/js/46.493af128.js"><link rel="prefetch" href="/blog/assets/js/47.d4ff4f8b.js"><link rel="prefetch" href="/blog/assets/js/49.bd283eee.js"><link rel="prefetch" href="/blog/assets/js/5.12a77d47.js"><link rel="prefetch" href="/blog/assets/js/7.b53970d0.js"><link rel="prefetch" href="/blog/assets/js/8.ac74953b.js"><link rel="prefetch" href="/blog/assets/js/9.ff2c335b.js"><link rel="prefetch" href="/blog/assets/js/vuejs-paginate.c4271a33.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.ccdcf3c0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout" class="flex flex-col" data-v-5d13d588><div class="header flex-none bg-cover bg-center" data-v-5d13d588><div class="container mx-auto h-16 flex items-center justify-between" data-v-5d13d588><div class="flex items-center" data-v-5d13d588><a href="/blog/" class="nav-logo router-link-active" data-v-5d13d588>Blog</a> <div class="search-box" data-v-5d13d588><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div> <div data-v-5d13d588><a href="/blog/post" class="nav-link router-link-active nav-link-active" data-v-5d13d588>博客文章</a><a href="/blog/lab" class="nav-link" data-v-5d13d588>实验室</a><a href="/blog/link" class="nav-link" data-v-5d13d588>友情链接</a><a href="/blog/guestbook/" class="nav-link" data-v-5d13d588>留言板</a></div></div></div> <div class="flex-1 m-t--8" data-v-5d13d588><div class="container mx-auto content" data-v-5d13d588><div class="grid grid-cols-11 gap-4" data-v-5d13d588><div class="card col-span-11 sm:col-span-11 md:col-span-11 lg:col-span-11 xl:col-span-9"><div class="p-4 border-b"><div class="mb-3 mt-1 text-lg font-bold">copy-webpack-plugin打包复制插件</div> <div class="flex items-center text-sm text-gray-600"><div class="mr-2">
+          2020-11-23
+        </div> <div class="mr-2">
+          vue
+        </div> <div class="flex items-center"><div class="tag-1 truncate">
+            Node.js
+          </div><div class="tag-1 truncate">
+            webpack
+          </div></div></div></div> <div class="p-4"><div class="content__default"><h1 id="copy-webpack-plugin">copy-webpack-plugin</h1> <p>Copies individual files or entire directories, which already exist, to the build directory.</p> <h2 id="getting-started">Getting Started</h2> <p>To begin, you'll need to install <code>copy-webpack-plugin</code>:</p> <div class="language-console extra-class"><pre class="language-text"><code>$ npm install copy-webpack-plugin --save-dev
+</code></pre></div><p>Then add the plugin to your <code>webpack</code> config. For example:</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> CopyPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;copy-webpack-plugin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;source&quot;</span><span class="token punctuation">,</span> to<span class="token operator">:</span> <span class="token string">&quot;dest&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;other&quot;</span><span class="token punctuation">,</span> to<span class="token operator">:</span> <span class="token string">&quot;public&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><blockquote><p>ℹ️ <code>webpack-copy-plugin</code> is not designed to copy files generated from the build process; rather, it is to copy files that already exist in the source tree, as part of the build process.</p></blockquote> <blockquote><p>ℹ️ If you want <code>webpack-dev-server</code> to write files to the output directory during development, you can force it with the <a href="https://github.com/webpack/webpack-dev-middleware#writetodisk" target="_blank" rel="noopener noreferrer"><code>writeToDisk</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> option or the <a href="https://github.com/gajus/write-file-webpack-plugin" target="_blank" rel="noopener noreferrer"><code>write-file-webpack-plugin</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</p></blockquote> <blockquote><p>ℹ️ You can get the original source filename from <a href="https://webpack.js.org/api/stats/#asset-objects" target="_blank" rel="noopener noreferrer">Asset Objects<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</p></blockquote> <h2 id="options">Options</h2> <p>The plugin's signature:</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> CopyPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;copy-webpack-plugin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;source&quot;</span><span class="token punctuation">,</span> to<span class="token operator">:</span> <span class="token string">&quot;dest&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;other&quot;</span><span class="token punctuation">,</span> to<span class="token operator">:</span> <span class="token string">&quot;public&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      options<span class="token operator">:</span> <span class="token punctuation">{</span>
+        concurrency<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="patterns">Patterns</h3> <table><thead><tr><th style="text-align:center;">Name</th> <th style="text-align:center;">Type</th> <th style="text-align:center;">Default</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:center;"><a href="#from"><code>from</code></a></td> <td style="text-align:center;"><code>{String}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;">Glob or path from where we сopy files.</td></tr> <tr><td style="text-align:center;"><a href="#to"><code>to</code></a></td> <td style="text-align:center;"><code>{String\|Function}</code></td> <td style="text-align:center;"><code>compiler.options.output</code></td> <td style="text-align:left;">Output path.</td></tr> <tr><td style="text-align:center;"><a href="#context"><code>context</code></a></td> <td style="text-align:center;"><code>{String}</code></td> <td style="text-align:center;"><code>options.context \|\| compiler.options.context</code></td> <td style="text-align:left;">A path that determines how to interpret the <code>from</code> path.</td></tr> <tr><td style="text-align:center;"><a href="#globoptions"><code>globOptions</code></a></td> <td style="text-align:center;"><code>{Object}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;"><a href="https://github.com/sindresorhus/globby#options" target="_blank" rel="noopener noreferrer">Options<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> passed to the glob pattern matching library including <code>ignore</code> option.</td></tr> <tr><td style="text-align:center;"><a href="#filter"><code>filter</code></a></td> <td style="text-align:center;"><code>{Function}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;">Allows to filter copied assets.</td></tr> <tr><td style="text-align:center;"><a href="#totype"><code>toType</code></a></td> <td style="text-align:center;"><code>{String}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;">Determinate what is <code>to</code> option - directory, file or template.</td></tr> <tr><td style="text-align:center;"><a href="#force"><code>force</code></a></td> <td style="text-align:center;"><code>{Boolean}</code></td> <td style="text-align:center;"><code>false</code></td> <td style="text-align:left;">Overwrites files already in <code>compilation.assets</code> (usually added by other plugins/loaders).</td></tr> <tr><td style="text-align:center;"><a href="#transform"><code>transform</code></a></td> <td style="text-align:center;"><code>{Object}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;">Allows to modify the file contents. Enable <code>transform</code> caching. You can use <code>{ transform: {cache: { key: 'my-cache-key' }} }</code> to invalidate the cache.</td></tr> <tr><td style="text-align:center;"><a href="#noerroronmissing"><code>noErrorOnMissing</code></a></td> <td style="text-align:center;"><code>{Boolean}</code></td> <td style="text-align:center;"><code>false</code></td> <td style="text-align:left;">Doesn't generate an error on missing file(s).</td></tr> <tr><td style="text-align:center;"><a href="#info"><code>info</code></a></td> <td style="text-align:center;"><code>{Object\|Function}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;">Allows to add assets info.</td></tr></tbody></table> <h4 id="from"><code>from</code></h4> <p>Type: <code>String</code>
+Default: <code>undefined</code></p> <p>Glob or path from where we сopy files.
+Globs accept <a href="https://github.com/mrmlnc/fast-glob#pattern-syntax" target="_blank" rel="noopener noreferrer">fast-glob pattern-syntax<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.
+Glob can only be a <code>string</code>.</p> <blockquote><p>⚠️ Don't use directly <code>\\</code> in <code>from</code> option if it is a <code>glob</code> (i.e <code>path\to\file.ext</code>) option because on UNIX the backslash is a valid character inside a path component, i.e., it's not a separator.
+On Windows, the forward slash and the backward slash are both separators.
+Instead please use <code>/</code>.</p></blockquote> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;relative/path/to/file.ext&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;relative/path/to/dir&quot;</span><span class="token punctuation">,</span>
+        path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;file.ext&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;dir&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;**/*&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;**/*&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// If absolute path is a `glob` we replace backslashes with forward slashes, because only forward slashes can be used in the `glob`</span>
+        path<span class="token punctuation">.</span>posix<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>
+          path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\\</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token string">&quot;*.txt&quot;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="for-windows"><code>For windows</code></h5> <p>If you define <code>from</code> as absolute file path or absolute folder path on <code>Windows</code>, you can use windows path segment (<code>\\</code>)</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;file.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>But you should always use forward-slashes in <code>glob</code> expressions
+See <a href="https://github.com/mrmlnc/fast-glob#how-to-write-patterns-on-windows" target="_blank" rel="noopener noreferrer">fast-glob manual<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token comment">// If absolute path is a `glob` we replace backslashes with forward slashes, because only forward slashes can be used in the `glob`</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span>posix<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>
+            path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;fixtures&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\\</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;*.txt&quot;</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>The <code>context</code> behaves differently depending on what the <code>from</code> is (<code>glob</code>, <code>file</code> or <code>dir</code>).
+More <a href="#examples"><code>examples</code></a></p> <h4 id="to"><code>to</code></h4> <p>Type: <code>String|Function</code>
+Default: <code>compiler.options.output</code></p> <h5 id="string">String</h5> <p>Output path.</p> <blockquote><p>⚠️ Don't use directly <code>\\</code> in <code>to</code> (i.e <code>path\to\dest</code>) option because on UNIX the backslash is a valid character inside a path component, i.e., it's not a separator.
+On Windows, the forward slash and the backward slash are both separators.
+Instead please use <code>/</code> or <code>path</code> methods.</p></blockquote> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;**/*&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;relative/path/to/dest/&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;**/*&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;/absolute/path/to/dest/&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;**/*&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;[path][name].[contenthash].[ext]&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="function">Function</h5> <p>Allows to modify the writing path.</p> <blockquote><p>⚠️ Don't return directly <code>\\</code> in <code>to</code> (i.e <code>path\to\newFile</code>) option because on UNIX the backslash is a valid character inside a path component, i.e., it's not a separator.
+On Windows, the forward slash and the backward slash are both separators.
+Instead please use <code>/</code> or <code>path</code> methods.</p></blockquote> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.png&quot;</span><span class="token punctuation">,</span>
+          <span class="token function">to</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> context<span class="token punctuation">,</span> absoluteFilename <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;dest/newPath/[name][ext]&quot;</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.png&quot;</span><span class="token punctuation">,</span>
+          <span class="token function">to</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> context<span class="token punctuation">,</span> absoluteFilename <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">&quot;dest/newPath/[name][ext]&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="context"><code>context</code></h4> <p>Type: <code>String</code>
+Default: <code>options.context|compiler.options.context</code></p> <p>A path that determines how to interpret the <code>from</code> path.</p> <blockquote><p>⚠️ Don't use directly <code>\\</code> in <code>context</code> (i.e <code>path\to\context</code>) option because on UNIX the backslash is a valid character inside a path component, i.e., it's not a separator.
+On Windows, the forward slash and the backward slash are both separators.
+Instead please use <code>/</code> or <code>path</code> methods.</p></blockquote> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.txt&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/&quot;</span><span class="token punctuation">,</span>
+          context<span class="token operator">:</span> <span class="token string">&quot;app/&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>The <code>context</code> option can be an absolute or relative path. If <code>context</code> is a relative, then it is converted to absolute based to <code>compiler.options.context</code></p> <p>Also, <code>context</code> indicates how to interpret the search results. Further, he is considered in this role.</p> <p>To determine the structure from which the found resources will be copied to the destination folder, the <code>context</code> option is used.</p> <p>If <code>from</code> is a file, then <code>context</code> is equal to the directory in which this file is located. Accordingly, the result will be only the file name.</p> <p>If <code>from</code> is a directory, then <code>context</code> is the same as <code>from</code> and is equal to the directory itself. In this case, the result will be a hierarchical structure of the found folders and files relative to the specified directory.</p> <p>If <code>from</code> is a glob, then regardless of the <code>context</code> option, the result will be the structure specified in the <code>from</code> option</p> <p>More <a href="#examples"><code>examples</code></a></p> <h4 id="globoptions"><code>globOptions</code></h4> <p>Type: <code>Object</code>
+Default: <code>undefined</code></p> <p>Allows to configute the glob pattern matching library used by the plugin. <a href="https://github.com/sindresorhus/globby#options" target="_blank" rel="noopener noreferrer">See the list of supported options<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>
+To exclude files from the selection, you should use <a href="https://github.com/mrmlnc/fast-glob#ignore" target="_blank" rel="noopener noreferrer">globOptions.ignore option<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;public/**/*&quot;</span><span class="token punctuation">,</span>
+          globOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+            dot<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            gitignore<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            ignore<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;**/file.*&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;**/ignored-directory/**&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="filter"><code>filter</code></h4> <p>Type: <code>Function</code>
+Default: <code>undefined</code></p> <blockquote><p>ℹ️ To ignore files by path please use the [<code>globOptions.ignore</code>]((#globoptions) option.</p></blockquote> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>promise<span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;public/**/*&quot;</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">filter</span><span class="token operator">:</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">resourcePath</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> fs<span class="token punctuation">.</span>promises<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>resourcePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> content <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>content <span class="token operator">===</span> <span class="token string">&quot;my-custom-content&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="totype"><code>toType</code></h4> <p>Type: <code>String</code>
+Default: <code>undefined</code></p> <p>Determinate what is <code>to</code> option - directory, file or template.
+Sometimes it is hard to say what is <code>to</code>, example <code>path/to/dir-with.ext</code>.
+If you want to copy files in directory you need use <code>dir</code> option.
+We try to automatically determine the <code>type</code> so you most likely do not need this option.</p> <table><thead><tr><th style="text-align:center;">Name</th> <th style="text-align:center;">Type</th> <th style="text-align:center;">Default</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:center;"><strong><code>'dir'</code></strong></td> <td style="text-align:center;"><code>{String}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;">If <code>to</code> has no extension or ends on <code>'/'</code></td></tr> <tr><td style="text-align:center;"><strong><code>'file'</code></strong></td> <td style="text-align:center;"><code>{String}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;">If <code>to</code> is not a directory and is not a template</td></tr> <tr><td style="text-align:center;"><strong><code>'template'</code></strong></td> <td style="text-align:center;"><code>{String}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;">If <code>to</code> contains <a href="https://github.com/webpack-contrib/file-loader#placeholders" target="_blank" rel="noopener noreferrer">a template pattern<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></td></tr></tbody></table> <h5 id="dir"><code>'dir'</code></h5> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;path/to/file.txt&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;directory/with/extension.ext&quot;</span><span class="token punctuation">,</span>
+          toType<span class="token operator">:</span> <span class="token string">&quot;dir&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="file"><code>'file'</code></h5> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;path/to/file.txt&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;file/without/extension&quot;</span><span class="token punctuation">,</span>
+          toType<span class="token operator">:</span> <span class="token string">&quot;file&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="template"><code>'template'</code></h5> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/[name].[hash].[ext]&quot;</span><span class="token punctuation">,</span>
+          toType<span class="token operator">:</span> <span class="token string">&quot;template&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="force"><code>force</code></h4> <p>Type: <code>Boolean</code>
+Default: <code>false</code></p> <p>Overwrites files already in <code>compilation.assets</code> (usually added by other plugins/loaders).</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/**/*&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/&quot;</span><span class="token punctuation">,</span>
+          force<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="transform"><code>transform</code></h4> <p>Type: <code>Function|Object</code>
+Default: <code>undefined</code></p> <p>Allows to modify the file contents.</p> <h5 id="function-2"><code>Function</code></h5> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.png&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/&quot;</span><span class="token punctuation">,</span>
+          <span class="token comment">// The `content` argument is a [`Buffer`](https://nodejs.org/api/buffer.html) object, it could be converted to a `String` to be processed using `content.toString()`</span>
+          <span class="token comment">// The `absoluteFrom` argument is a `String`, it is absolute path from where the file is being copied</span>
+          <span class="token function">transform</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> absoluteFrom</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">optimize</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="object"><code>Object</code></h5> <table><thead><tr><th style="text-align:center;">Name</th> <th style="text-align:center;">Type</th> <th style="text-align:center;">Default</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:center;"><strong><a href="#transformer"><code>transformer</code></a></strong></td> <td style="text-align:center;"><code>{Function}</code></td> <td style="text-align:center;"><code>undefined</code></td> <td style="text-align:left;">Allows to modify the file contents.</td></tr> <tr><td style="text-align:center;"><strong><a href="#cache"><code>cache</code></a></strong></td> <td style="text-align:center;"><code>{Boolean\|Object}</code></td> <td style="text-align:center;"><code>false</code></td> <td style="text-align:left;">Enable <code>transform</code> caching. You can use <code>transform: { cache: { key: 'my-cache-key' } }</code> to invalidate the cache.</td></tr></tbody></table> <h6 id="transformer"><code>transformer</code></h6> <p>Type: <code>Function</code>
+Default: <code>undefined</code></p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.png&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/&quot;</span><span class="token punctuation">,</span>
+          <span class="token comment">// The `content` argument is a [`Buffer`](https://nodejs.org/api/buffer.html) object, it could be converted to a `String` to be processed using `content.toString()`</span>
+          <span class="token comment">// The `absoluteFrom` argument is a `String`, it is absolute path from where the file is being copied</span>
+          transform<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">transformer</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> absoluteFrom</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token function">optimize</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.png&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/&quot;</span><span class="token punctuation">,</span>
+          transform<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">transformer</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token function">optimize</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h6 id="cache"><code>cache</code></h6> <p>Type: <code>Boolean|Object</code>
+Default: <code>false</code></p> <p><strong>webpack.config.js</strong></p> <p>Enable/disable and configure caching.
+Default path to cache directory: <code>node_modules/.cache/copy-webpack-plugin</code>.</p> <h6 id="boolean"><code>Boolean</code></h6> <p>Enables/Disable <code>transform</code> caching.</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.png&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/&quot;</span><span class="token punctuation">,</span>
+          transform<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">transformer</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token function">optimize</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            cache<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h5 id="object-2"><code>Object</code></h5> <p>Enables <code>transform</code> caching and setup cache directory and invalidation keys.</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.png&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/&quot;</span><span class="token punctuation">,</span>
+          transform<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">transformer</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token function">optimize</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            cache<span class="token operator">:</span> <span class="token punctuation">{</span>
+              directory<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;cache-directory&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              keys<span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token comment">// May be useful for invalidating cache based on external values</span>
+                <span class="token comment">// For example, you can invalid cache based on `process.version` - { node: process.version }</span>
+                key<span class="token operator">:</span> <span class="token string">&quot;value&quot;</span><span class="token punctuation">,</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>You can setup invalidation keys using a function.</p> <p>Simple function:</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.png&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/&quot;</span><span class="token punctuation">,</span>
+          transform<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">transformer</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token function">optimize</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            cache<span class="token operator">:</span> <span class="token punctuation">{</span>
+              directory<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;cache-directory&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token function-variable function">keys</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">defaultCacheKeys<span class="token punctuation">,</span> absoluteFrom</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">const</span> keys <span class="token operator">=</span> <span class="token function">getCustomCacheInvalidationKeysSync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                  <span class="token operator">...</span>defaultCacheKeys<span class="token punctuation">,</span>
+                  keys<span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Async function:</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/*.png&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;dest/&quot;</span><span class="token punctuation">,</span>
+          transform<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token function">transformer</span><span class="token punctuation">(</span><span class="token parameter">content<span class="token punctuation">,</span> path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token function">optimize</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            cache<span class="token operator">:</span> <span class="token punctuation">{</span>
+              directory<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;cache-directory&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+              <span class="token function-variable function">keys</span><span class="token operator">:</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">defaultCacheKeys<span class="token punctuation">,</span> absoluteFrom</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">const</span> keys <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getCustomCacheInvalidationKeysAsync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                  <span class="token operator">...</span>defaultCacheKeys<span class="token punctuation">,</span>
+                  keys<span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="noerroronmissing"><code>noErrorOnMissing</code></h3> <p>Type: <code>Boolean</code>
+Default: <code>false</code></p> <p>Doesn't generate an error on missing file(s);</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;missing-file.txt&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          noErrorOnMissing<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="info"><code>info</code></h4> <p>Type: <code>Object|Function&lt;Object&gt;</code>
+Default: <code>undefined</code></p> <p>Allows to add assets info.</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;relative/path/to/file.ext&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;**/*&quot;</span><span class="token punctuation">,</span>
+          <span class="token comment">// Terser skip this file for minimization</span>
+          info<span class="token operator">:</span> <span class="token punctuation">{</span> minimized<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;relative/path/to/file.ext&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;**/*&quot;</span><span class="token punctuation">,</span>
+          <span class="token comment">// Terser skip this file for minimization</span>
+          <span class="token function-variable function">info</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">file</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> minimized<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="options-2">Options</h3> <table><thead><tr><th style="text-align:center;">Name</th> <th style="text-align:center;">Type</th> <th style="text-align:center;">Default</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:center;"><a href="#concurrency"><code>concurrency</code></a></td> <td style="text-align:center;"><code>{Number}</code></td> <td style="text-align:center;"><code>100</code></td> <td style="text-align:left;">Limits the number of simultaneous requests to fs</td></tr></tbody></table> <h4 id="concurrency"><code>concurrency</code></h4> <p>limits the number of simultaneous requests to fs</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">...</span>patterns<span class="token punctuation">]</span><span class="token punctuation">,</span>
+      options<span class="token operator">:</span> <span class="token punctuation">{</span> concurrency<span class="token operator">:</span> <span class="token number">50</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="examples">Examples</h3> <h4 id="different-variants-from-glob-file-or-dir">Different variants <code>from</code> (<code>glob</code>, <code>file</code> or <code>dir</code>).</h4> <p>Take for example the following file structure:</p> <div class="language- extra-class"><pre class="language-text"><code>src/directory-nested/deep-nested/deepnested-file.txt
+src/directory-nested/nested-file.txt
+</code></pre></div><h5 id="from-is-a-glob">From is a Glob</h5> <p>Everything that you specify in <code>from</code> will be included in the result:</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/directory-nested/**/*&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result:</p> <div class="language-txt extra-class"><pre class="language-text"><code>src/directory-nested/deep-nested/deepnested-file.txt,
+src/directory-nested/nested-file.txt
+</code></pre></div><p>If you want only content <code>src/directory-nested/</code>, you should only indicate <code>glob</code> in <code>from</code>. The path to the folder in which the search should take place, should be moved to <code>context</code>.</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;**/*&quot;</span><span class="token punctuation">,</span>
+          context<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;directory-nested&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result:</p> <div class="language-txt extra-class"><pre class="language-text"><code>deep-nested/deepnested-file.txt,
+nested-file.txt
+</code></pre></div><h5 id="from-is-a-dir">From is a Dir</h5> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;directory-nested&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result:</p> <div class="language-txt extra-class"><pre class="language-text"><code>deep-nested/deepnested-file.txt,
+nested-file.txt
+</code></pre></div><p>Technically, this is <code>**/*</code> with a predefined context equal to the specified directory.</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;**/*&quot;</span><span class="token punctuation">,</span>
+          context<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;directory-nested&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result:</p> <div class="language-txt extra-class"><pre class="language-text"><code>deep-nested/deepnested-file.txt,
+nested-file.txt
+</code></pre></div><h5 id="from-is-a-file">From is a File</h5> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>
+            __dirname<span class="token punctuation">,</span>
+            <span class="token string">&quot;src&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;directory-nested&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;nested-file.txt&quot;</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result:</p> <div class="language-txt extra-class"><pre class="language-text"><code>nested-file.txt
+</code></pre></div><p>Technically, this is a filename with a predefined context equal to <code>path.dirname(pathToFile)</code>.</p> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;nested-file.txt&quot;</span><span class="token punctuation">,</span>
+          context<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;directory-nested&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result:</p> <div class="language-txt extra-class"><pre class="language-text"><code>nested-file.txt
+</code></pre></div><h4 id="ignoring-files">Ignoring files</h4> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> path<span class="token punctuation">.</span>posix<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>
+            path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;src&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\\</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;**/*&quot;</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          globOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+            ignore<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token comment">// Ignore all `txt` files</span>
+              <span class="token string">&quot;**/*.txt&quot;</span><span class="token punctuation">,</span>
+              <span class="token comment">// Ignore all files in all subdirectories</span>
+              <span class="token string">&quot;**/subdir/**&quot;</span><span class="token punctuation">,</span>
+            <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="flatten-copy">Flatten copy</h4> <p>Removes all directory references and only copies file names.</p> <blockquote><p>⚠️ If files have the same name, the result is non-deterministic.</p></blockquote> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;src/**/*&quot;</span><span class="token punctuation">,</span>
+          to<span class="token operator">:</span> <span class="token string">&quot;[name].[ext]&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result:</p> <div class="language-txt extra-class"><pre class="language-text"><code>file-1.txt
+file-2.txt
+nested-file.txt
+</code></pre></div><h4 id="copy-in-new-directory">Copy in new directory</h4> <p><strong>webpack.config.js</strong></p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CopyPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      patterns<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token comment">// When copying files starting with a dot, must specify the toType option</span>
+          <span class="token comment">// toType: &quot;file&quot;,</span>
+          <span class="token function">to</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> context<span class="token punctuation">,</span> absoluteFilename <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">newdirectory/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>path<span class="token punctuation">.</span><span class="token function">relative</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> absoluteFilename<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token keyword">from</span><span class="token operator">:</span> <span class="token string">&quot;directory&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Result:</p> <div class="language-txt extra-class"><pre class="language-text"><code>&quot;newdirectory/file-1.txt&quot;,
+&quot;newdirectory/nestedfile.txt&quot;,
+&quot;newdirectory/nested/deep-nested/deepnested.txt&quot;,
+&quot;newdirectory/nested/nestedfile.txt&quot;,
+</code></pre></div><h2 id="contributing">Contributing</h2> <p>Please take a moment to read our contributing guidelines if you haven't yet done so.</p> <p><a href="/blog/posts/.github/CONTRIBUTING.html">CONTRIBUTING</a></p> <h2 id="license">License</h2> <p><a href="./LICENSE">MIT</a></p></div></div> <div><!----></div></div> <div class="card col-span-2 sm:hidden md:hidden lg:hidden xl:block"><div style="height: 100vh; position: sticky; top: 0"><div class="px-2 truncate level-2"><a href="#getting-started" class="sidebar-link">
+          Getting Started
+        </a></div><div class="px-2 truncate level-2"><a href="#options" class="sidebar-link">
+          Options
+        </a></div><div class="px-2 truncate level-3"><a href="#patterns" class="sidebar-link">
+          Patterns
+        </a></div><div class="px-2 truncate level-3"><a href="#noerroronmissing" class="sidebar-link">
+          noErrorOnMissing
+        </a></div><div class="px-2 truncate level-3"><a href="#options-2" class="sidebar-link">
+          Options
+        </a></div><div class="px-2 truncate level-3"><a href="#examples" class="sidebar-link">
+          Examples
+        </a></div><div class="px-2 truncate level-2"><a href="#contributing" class="sidebar-link">
+          Contributing
+        </a></div><div class="px-2 truncate level-2"><a href="#license" class="sidebar-link">
+          License
+        </a></div></div></div></div></div></div> <div class="flex-none footer mt-16" data-v-5d13d588><div class="container mx-auto flex items-center justify-center h-full" data-v-5d13d588><a href="https://github.com/ulivz/70-lines-of-vuepress-blog-theme" data-v-5d13d588>Github</a> · Powered by VuePress<p data-v-5d13d588></p></div></div></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.c7063bc1.js" defer></script><script src="/blog/assets/js/6.c6ab8268.js" defer></script><script src="/blog/assets/js/48.2715fac7.js" defer></script>
+  </body>
+</html>
