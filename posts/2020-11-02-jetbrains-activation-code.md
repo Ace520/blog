@@ -1,3 +1,12 @@
+---
+title: JetBrains开发工具激活码
+bg: JetBrains.png
+date: 2020-11-21
+topic: 工具
+tags: 
+  - 工具
+---
+
 # JetBrains开发工具激活码
 
 下载地址：[https://www.jetbrains.com/](https://www.jetbrains.com/)
