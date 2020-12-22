@@ -1,7 +1,7 @@
 <template>
   <div id="global-layout" class="flex flex-col">
     <div class="header flex-none bg-cover bg-center" 
-    v-lazy:background-image="$withBase($page.frontmatter && $page.frontmatter.bg ? '/'+$page.frontmatter.bg : '/girl1.jpg')">
+    v-lazy:background-image="$withBase($page.frontmatter && $page.frontmatter.bg ? '/images/'+$page.frontmatter.bg : '/images/girl1.jpg')">
         <div class="container mx-auto h-16 flex items-center justify-between">
         <div class="flex items-center">
           <router-link to="/" class="nav-logo">Blog</router-link>
@@ -32,7 +32,6 @@ import SearchBox from "@SearchBox";
 export default {
   components: { DefaultGlobalLayout: GlobalLayout, SearchBox },
   mounted() {
-    console.log(this)
   },
 };
 </script>

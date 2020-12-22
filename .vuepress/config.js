@@ -4,7 +4,7 @@ module.exports = {
     description: 'Ace blog',
     themeConfig: {
         nav: [
-            { text: '博客文章', link: '/post', layout: ['Layout','PostItem','FrontmatterPagination'] },
+            { text: '博客文章', link: '/posts', layout: ['Layout','PostItem','FrontmatterPagination'] },
             { text: '实验室', link: '/lab', layout: ["Lab"] },
             { text: '友情链接', link: '/link', layout: ['Link'] },
             { text: '留言板', link: '/guestbook/', layout: ['Guestbook'] },
@@ -30,7 +30,7 @@ module.exports = {
                 {
                     id: 'post',
                     dirname: 'posts',
-                    path: '/post/',
+                    path: '/posts/',
                     itemPermalink: '/post/:year/:month/:day/:slug',
                     layout: 'Layout',
                     itemLayout: 'PostItem',

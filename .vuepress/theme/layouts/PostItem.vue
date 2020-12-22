@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="p-4">
+      <div class="p-4 markdown-body">
         <Content />
       </div>
       <div>

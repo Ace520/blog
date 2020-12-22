@@ -5,7 +5,7 @@
       v-for="(item, index) in $pagination.pages"
       :key="index"
       class="mx-auto card bg-cover bg-center text-white"
-      v-lazy:background-image="$withBase('/' + item.frontmatter.bg)"
+      v-lazy:background-image="$withBase('/images/' + item.frontmatter.bg)"
     >
       <div class="flex flex-col items-center justify-center py-20">
         <div class="text-2xl">{{ item.title }}</div>

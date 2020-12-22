@@ -45,7 +45,7 @@
         target="_blank"
       >
         <div
-          v-lazy:background-image="$withBase('/' + item.frontmatter.bg)"
+          v-lazy:background-image="$withBase('/images/' + item.frontmatter.bg)"
           class="h-48 bg-cover bg-center"
         ></div>
         <div class="p-2">

@@ -6,7 +6,7 @@
       >
         <div
           class="bg-cover bg-center h-20 w-20 border rounded-full"
-          v-lazy:background-image="$withBase('/avatar.jpg')"
+          v-lazy:background-image="$withBase('/images/avatar.jpg')"
         ></div>
         <div class="mt-4 flex items-center pl-5">
           ACE<vp-icon class="ml-1" name="male" />
@@ -56,7 +56,7 @@
           :key="index"
           v-if="index < 2"
           class="card bg-cover bg-center text-white"
-          v-lazy:background-image="$withBase(item.frontmatter.bg)"
+          v-lazy:background-image="$withBase('/images/' + item.frontmatter.bg)"
         >
           <div class="flex flex-col items-center justify-center h-64">
             <div class="text-xl">{{ item.frontmatter.title }}</div>
