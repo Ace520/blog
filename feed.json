@@ -6,53 +6,6 @@
     "description": "Ace blog",
     "items": [
         {
-            "id": "https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/",
-            "url": "https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/",
-            "title": "Travis CI持续集成服务",
-            "date_modified": "2019-06-18T00:00:00.000Z"
-        },
-        {
-            "id": "https://ace520.github.io/blog/lab/travis-ci-tutorial/",
-            "url": "https://ace520.github.io/blog/lab/travis-ci-tutorial/",
-            "title": "Travis CI持续集成服务",
-            "date_modified": "2019-06-18T00:00:00.000Z"
-        },
-        {
-            "id": "https://ace520.github.io/blog/lab/cheatsheet-copy-2/",
-            "url": "https://ace520.github.io/blog/lab/cheatsheet-copy-2/",
-            "title": "速查表",
-            "summary": "速查表",
-            "date_modified": "2020-12-09T00:00:00.000Z"
-        },
-        {
-            "id": "https://ace520.github.io/blog/lab/cheatsheet-copy-3/",
-            "url": "https://ace520.github.io/blog/lab/cheatsheet-copy-3/",
-            "title": "速查表",
-            "summary": "速查表",
-            "date_modified": "2020-12-09T00:00:00.000Z"
-        },
-        {
-            "id": "https://ace520.github.io/blog/lab/cheatsheet-copy-4/",
-            "url": "https://ace520.github.io/blog/lab/cheatsheet-copy-4/",
-            "title": "速查表",
-            "summary": "速查表",
-            "date_modified": "2020-12-09T00:00:00.000Z"
-        },
-        {
-            "id": "https://ace520.github.io/blog/lab/cheatsheet-copy-5/",
-            "url": "https://ace520.github.io/blog/lab/cheatsheet-copy-5/",
-            "title": "速查表",
-            "summary": "速查表",
-            "date_modified": "2020-12-09T00:00:00.000Z"
-        },
-        {
-            "id": "https://ace520.github.io/blog/lab/cheatsheet-copy/",
-            "url": "https://ace520.github.io/blog/lab/cheatsheet-copy/",
-            "title": "速查表",
-            "summary": "速查表",
-            "date_modified": "2020-12-09T00:00:00.000Z"
-        },
-        {
             "id": "https://ace520.github.io/blog/lab/cheatsheet/",
             "url": "https://ace520.github.io/blog/lab/cheatsheet/",
             "title": "速查表",
@@ -142,6 +95,59 @@
             "title": "barryvdh/laravel-ide-helper IDE 开发 Laravel 项目的好帮手",
             "summary": "Require this package with composer using the following command:",
             "image": "https://ace520.github.io/blog/LICENSE.md",
+            "date_modified": "2020-05-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://ace520.github.io/blog/post/2020/05/22/dingo-api/",
+            "url": "https://ace520.github.io/blog/post/2020/05/22/dingo-api/",
+            "title": "dingo/api 构建 API 服务器的完整解决方案",
+            "summary": "For answers you may not find in the Wiki, avoid posting issues. Feel free to ask for support on the dedicated Slack room. Make sure to mention specialtactics so he is notified.",
+            "image": "https://img.shields.io/travis/dingo/api/master.svg?style=flat-square",
+            "date_modified": "2020-05-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://ace520.github.io/blog/post/2020/05/22/fruitcake-laravel-cors/",
+            "url": "https://ace520.github.io/blog/post/2020/05/22/fruitcake-laravel-cors/",
+            "title": "fruitcake/laravel-cors 跨域资源共享的支持",
+            "summary": "To allow CORS for all your routes, add the HandleCors middleware in the $middleware property of  app/Http/Kernel.php class:",
+            "image": "https://ace520.github.io/blog/LICENSE.md",
+            "date_modified": "2020-05-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://ace520.github.io/blog/post/2020/05/23/intervention-image/",
+            "url": "https://ace520.github.io/blog/post/2020/05/23/intervention-image/",
+            "title": "intervention/image 图片处理扩展包",
+            "date_modified": "2020-05-23T00:00:00.000Z"
+        },
+        {
+            "id": "https://ace520.github.io/blog/post/2020/05/22/jenssegers-date/",
+            "url": "https://ace520.github.io/blog/post/2020/05/22/jenssegers-date/",
+            "title": "jenssegers/date 日期处理工具",
+            "summary": "https://github.com/jenssegers/date\nDate\n",
+            "image": "http://img.shields.io/github/release/jenssegers/date.svg",
+            "date_modified": "2020-05-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://ace520.github.io/blog/post/2020/05/22/jenssegers-laravel-mongodb/",
+            "url": "https://ace520.github.io/blog/post/2020/05/22/jenssegers-laravel-mongodb/",
+            "title": "jenssegers/laravel-mongodb MongoDB 数据库的支持",
+            "summary": "Laravel MongoDB\n",
+            "image": "http://img.shields.io/github/release/jenssegers/laravel-mongodb.svg",
+            "date_modified": "2020-05-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://ace520.github.io/blog/post/2020/05/22/maatwebsite-laravel-excel/",
+            "url": "https://ace520.github.io/blog/post/2020/05/22/maatwebsite-laravel-excel/",
+            "title": "Maatwebsite/Laravel-Excel Excel 处理工具",
+            "image": "https://user-images.githubusercontent.com/7728097/57463977-2263fc80-727c-11e9-833d-669d816fb7fb.jpg",
+            "date_modified": "2020-05-22T00:00:00.000Z"
+        },
+        {
+            "id": "https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/",
+            "url": "https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/",
+            "title": "mewebstudio/captcha 图片验证码",
+            "summary": "The Captcha Service Provider can be installed via Composer by requiring the\nmews/captcha package and setting the minimum-stability to dev (required for Laravel 5) in your\nproject's composer.json.",
+            "image": "https://travis-ci.org/mewebstudio/captcha.svg?branch=master",
             "date_modified": "2020-05-22T00:00:00.000Z"
         }
     ]

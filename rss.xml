@@ -4,57 +4,10 @@
         <title>ACE-BLOG</title>
         <link>https://ace520.github.io/blog</link>
         <description>Ace blog</description>
-        <lastBuildDate>Tue, 22 Dec 2020 07:50:39 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Dec 2020 10:56:46 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://ace520.github.io/blog/feed.atom" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[Travis CI持续集成服务]]></title>
-            <link>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</link>
-            <guid>https://ace520.github.io/blog/lab/travis-ci-tutorial-copy/</guid>
-            <pubDate>Tue, 18 Jun 2019 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Travis CI持续集成服务]]></title>
-            <link>https://ace520.github.io/blog/lab/travis-ci-tutorial/</link>
-            <guid>https://ace520.github.io/blog/lab/travis-ci-tutorial/</guid>
-            <pubDate>Tue, 18 Jun 2019 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[速查表]]></title>
-            <link>https://ace520.github.io/blog/lab/cheatsheet-copy-2/</link>
-            <guid>https://ace520.github.io/blog/lab/cheatsheet-copy-2/</guid>
-            <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[速查表]]></description>
-        </item>
-        <item>
-            <title><![CDATA[速查表]]></title>
-            <link>https://ace520.github.io/blog/lab/cheatsheet-copy-3/</link>
-            <guid>https://ace520.github.io/blog/lab/cheatsheet-copy-3/</guid>
-            <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[速查表]]></description>
-        </item>
-        <item>
-            <title><![CDATA[速查表]]></title>
-            <link>https://ace520.github.io/blog/lab/cheatsheet-copy-4/</link>
-            <guid>https://ace520.github.io/blog/lab/cheatsheet-copy-4/</guid>
-            <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[速查表]]></description>
-        </item>
-        <item>
-            <title><![CDATA[速查表]]></title>
-            <link>https://ace520.github.io/blog/lab/cheatsheet-copy-5/</link>
-            <guid>https://ace520.github.io/blog/lab/cheatsheet-copy-5/</guid>
-            <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[速查表]]></description>
-        </item>
-        <item>
-            <title><![CDATA[速查表]]></title>
-            <link>https://ace520.github.io/blog/lab/cheatsheet-copy/</link>
-            <guid>https://ace520.github.io/blog/lab/cheatsheet-copy/</guid>
-            <pubDate>Wed, 09 Dec 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[速查表]]></description>
-        </item>
         <item>
             <title><![CDATA[速查表]]></title>
             <link>https://ace520.github.io/blog/lab/cheatsheet/</link>
@@ -150,6 +103,70 @@ Upload files with a single curl command from your terminal! curl --upload-file f
             <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Require this package with composer using the following command:]]></description>
             <enclosure url="https://ace520.github.io/blog/LICENSE.md">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[dingo/api 构建 API 服务器的完整解决方案]]></title>
+            <link>https://ace520.github.io/blog/post/2020/05/22/dingo-api/</link>
+            <guid>https://ace520.github.io/blog/post/2020/05/22/dingo-api/</guid>
+            <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[For answers you may not find in the Wiki, avoid posting issues. Feel free to ask for support on the dedicated Slack room. Make sure to mention specialtactics so he is notified.]]></description>
+            <enclosure url="https://img.shields.io/travis/dingo/api/master.svg?style=flat-square">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[fruitcake/laravel-cors 跨域资源共享的支持]]></title>
+            <link>https://ace520.github.io/blog/post/2020/05/22/fruitcake-laravel-cors/</link>
+            <guid>https://ace520.github.io/blog/post/2020/05/22/fruitcake-laravel-cors/</guid>
+            <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[To allow CORS for all your routes, add the HandleCors middleware in the $middleware property of  app/Http/Kernel.php class:]]></description>
+            <enclosure url="https://ace520.github.io/blog/LICENSE.md">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[intervention/image 图片处理扩展包]]></title>
+            <link>https://ace520.github.io/blog/post/2020/05/23/intervention-image/</link>
+            <guid>https://ace520.github.io/blog/post/2020/05/23/intervention-image/</guid>
+            <pubDate>Sat, 23 May 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[jenssegers/date 日期处理工具]]></title>
+            <link>https://ace520.github.io/blog/post/2020/05/22/jenssegers-date/</link>
+            <guid>https://ace520.github.io/blog/post/2020/05/22/jenssegers-date/</guid>
+            <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[https://github.com/jenssegers/date
+Date
+]]></description>
+            <enclosure url="http://img.shields.io/github/release/jenssegers/date.svg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[jenssegers/laravel-mongodb MongoDB 数据库的支持]]></title>
+            <link>https://ace520.github.io/blog/post/2020/05/22/jenssegers-laravel-mongodb/</link>
+            <guid>https://ace520.github.io/blog/post/2020/05/22/jenssegers-laravel-mongodb/</guid>
+            <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Laravel MongoDB
+]]></description>
+            <enclosure url="http://img.shields.io/github/release/jenssegers/laravel-mongodb.svg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Maatwebsite/Laravel-Excel Excel 处理工具]]></title>
+            <link>https://ace520.github.io/blog/post/2020/05/22/maatwebsite-laravel-excel/</link>
+            <guid>https://ace520.github.io/blog/post/2020/05/22/maatwebsite-laravel-excel/</guid>
+            <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
+            <enclosure url="https://user-images.githubusercontent.com/7728097/57463977-2263fc80-727c-11e9-833d-669d816fb7fb.jpg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[mewebstudio/captcha 图片验证码]]></title>
+            <link>https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/</link>
+            <guid>https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/</guid>
+            <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Captcha Service Provider can be installed via Composer by requiring the
+mews/captcha package and setting the minimum-stability to dev (required for Laravel 5) in your
+project's composer.json.]]></description>
+            <enclosure url="https://travis-ci.org/mewebstudio/captcha.svg?branch=master">
             </enclosure>
         </item>
     </channel>
