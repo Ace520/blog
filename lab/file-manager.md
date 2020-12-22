@@ -1,6 +1,9 @@
 ---
 title: GH文件管理器 
+description: 速查表
 bg: github.jpg
+url: https://ace520.github.io/file-manager
+github: https://github.com/Ace520/file-manager
 date: 2020-12-22
 topic: 实验室
 tags: 
