@@ -7,5 +7,6 @@ module.exports = {
         content: [
             './.vuepress/**/*.vue',
         ],
+        whitelist: ["html", "body", '.content__default', '.markdown-body', '.vssue']
     },
 }

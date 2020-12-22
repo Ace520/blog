@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "vuepress build .",
-    "dev": "vuepress dev ."
+    "dev": "vuepress dev .",
+    "gh": "gh-pages -d .vuepress/dist"
   },
   "devDependencies": {
     "@goy/vuepress-plugin-svg-icons": "^4.2.1",
