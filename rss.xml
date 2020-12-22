@@ -4,10 +4,16 @@
         <title>ACE-BLOG</title>
         <link>https://ace520.github.io/blog</link>
         <description>Ace blog</description>
-        <lastBuildDate>Tue, 22 Dec 2020 10:56:46 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Dec 2020 11:03:12 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <atom:link href="https://ace520.github.io/blog/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[GitHub驱动文件管理器]]></title>
+            <link>https://ace520.github.io/blog/lab/file-manager/</link>
+            <guid>https://ace520.github.io/blog/lab/file-manager/</guid>
+            <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[速查表]]></title>
             <link>https://ace520.github.io/blog/lab/cheatsheet/</link>
@@ -156,17 +162,6 @@ Date
             <guid>https://ace520.github.io/blog/post/2020/05/22/maatwebsite-laravel-excel/</guid>
             <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
             <enclosure url="https://user-images.githubusercontent.com/7728097/57463977-2263fc80-727c-11e9-833d-669d816fb7fb.jpg">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[mewebstudio/captcha 图片验证码]]></title>
-            <link>https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/</link>
-            <guid>https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/</guid>
-            <pubDate>Fri, 22 May 2020 00:00:00 GMT</pubDate>
-            <description><![CDATA[The Captcha Service Provider can be installed via Composer by requiring the
-mews/captcha package and setting the minimum-stability to dev (required for Laravel 5) in your
-project's composer.json.]]></description>
-            <enclosure url="https://travis-ci.org/mewebstudio/captcha.svg?branch=master">
             </enclosure>
         </item>
     </channel>

@@ -2,11 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ace520.github.io/blog</id>
     <title>ACE-BLOG</title>
-    <updated>2020-12-22T10:56:46.254Z</updated>
+    <updated>2020-12-22T11:03:12.794Z</updated>
     <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
     <link rel="alternate" href="https://ace520.github.io/blog"/>
     <link rel="self" href="https://ace520.github.io/blog/feed.atom"/>
     <subtitle>Ace blog</subtitle>
+    <entry>
+        <title type="html"><![CDATA[GitHub驱动文件管理器]]></title>
+        <id>https://ace520.github.io/blog/lab/file-manager/</id>
+        <link href="https://ace520.github.io/blog/lab/file-manager/">
+        </link>
+        <updated>2020-05-22T00:00:00.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[速查表]]></title>
         <id>https://ace520.github.io/blog/lab/cheatsheet/</id>
@@ -161,15 +168,5 @@ Date
         <link href="https://ace520.github.io/blog/post/2020/05/22/maatwebsite-laravel-excel/">
         </link>
         <updated>2020-05-22T00:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[mewebstudio/captcha 图片验证码]]></title>
-        <id>https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/</id>
-        <link href="https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/">
-        </link>
-        <updated>2020-05-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[The Captcha Service Provider can be installed via Composer by requiring the
-mews/captcha package and setting the minimum-stability to dev (required for Laravel 5) in your
-project's composer.json.]]></summary>
     </entry>
 </feed>

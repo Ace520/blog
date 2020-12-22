@@ -6,6 +6,12 @@
     "description": "Ace blog",
     "items": [
         {
+            "id": "https://ace520.github.io/blog/lab/file-manager/",
+            "url": "https://ace520.github.io/blog/lab/file-manager/",
+            "title": "GitHub驱动文件管理器",
+            "date_modified": "2020-05-22T00:00:00.000Z"
+        },
+        {
             "id": "https://ace520.github.io/blog/lab/cheatsheet/",
             "url": "https://ace520.github.io/blog/lab/cheatsheet/",
             "title": "速查表",
@@ -140,14 +146,6 @@
             "url": "https://ace520.github.io/blog/post/2020/05/22/maatwebsite-laravel-excel/",
             "title": "Maatwebsite/Laravel-Excel Excel 处理工具",
             "image": "https://user-images.githubusercontent.com/7728097/57463977-2263fc80-727c-11e9-833d-669d816fb7fb.jpg",
-            "date_modified": "2020-05-22T00:00:00.000Z"
-        },
-        {
-            "id": "https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/",
-            "url": "https://ace520.github.io/blog/post/2020/05/22/mewebstudio-captcha/",
-            "title": "mewebstudio/captcha 图片验证码",
-            "summary": "The Captcha Service Provider can be installed via Composer by requiring the\nmews/captcha package and setting the minimum-stability to dev (required for Laravel 5) in your\nproject's composer.json.",
-            "image": "https://travis-ci.org/mewebstudio/captcha.svg?branch=master",
             "date_modified": "2020-05-22T00:00:00.000Z"
         }
     ]
